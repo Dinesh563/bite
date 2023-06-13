@@ -13,10 +13,11 @@ defmodule BiteWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", BiteWeb do
-    pipe_through :browser
+  scope "/api/v1", BiteWeb do
+    pipe_through :api
 
     get "/", PageController, :index
+    post "/identity", IdentityController, :identity
   end
 
   # Other scopes may use custom stacks.

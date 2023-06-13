@@ -15,7 +15,7 @@ config :bite, BiteWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "QduoS3h5DKjDmRUTQD9aof01mGed0E2T7jR9RZbwhGDikz9+gPI134tgQzo+2sJu",
   render_errors: [view: BiteWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: Bite.PubSub, adapter: Phoenix.PubSub.PG2],
+  pubsub: [name: Bite.PubSub],
   live_view: [signing_salt: "2i1iKJah"]
 
 # Configures Elixir's Logger

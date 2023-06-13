@@ -7,7 +7,12 @@ config :bite, Bite.Repo,
   database: "bite_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
-  pool_size: 10
+  pool_size: 10,
+  migration_timestamps: [
+    type: :naive_datetime,
+    inserted_at: :createdAt,
+    updated_at: :changedAt
+  ]
 
 # For development, we disable any cache and enable
 # debugging and code reloading.
